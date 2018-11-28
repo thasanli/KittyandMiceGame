@@ -1,0 +1,180 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-image: url(/img/wall.jpg);
+    background-size: cover;
+}
+
+#htmlPath {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* start screen */
+
+#miceContainer {
+    position: absolute;
+    padding: 2vw;
+}
+
+#miceStartImg {
+    max-width: 60vw;
+    max-height: 50vh;
+    opacity: 0.8;
+}
+
+#introductionTxt {
+    border: 2px solid #1111117a;
+    background-color: rgb(255, 255, 255, 0.5);
+    margin-top: 45vh;
+    font-size: 25px;
+    color: black;
+}
+
+#intotext {
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+#startGameContainer {
+    border: 2px solid #1111117a;
+    background-color: rgb(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 4vw;
+    width: 50vh;
+    height: 7vh;
+    cursor: pointer;
+}
+
+#clickHereBtn {
+    text-align: center;
+    height: 48px;
+    width: 32vh;
+    margin-left: 5vh;
+}
+
+#startGameSpanBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 40px;
+}
+
+#mouseBtn {
+    background: url(/img/mouseAnimation.png);
+    width: 48px;
+    height: 96px;
+    margin-left: 2vw;
+    transform: rotate(90deg);
+    opacity: unset;
+    animation: mouseBtn 0.8s steps(8) infinite alternate-reverse;
+}
+
+@keyframes mouseBtn {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -384px 0;
+    }
+}
+
+/* loading screen*/
+
+#loading {
+    border: 2px solid #1111117a;
+    width: 50vh;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255, 0.5);
+    margin-top: 27vh;
+}
+
+#gameloading {
+    font-size: 30vh;
+}
+
+/* game */
+
+#scoreTimeContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 29vh;
+    height: 44vh;
+    width: 35vh;
+}
+
+#scoreTimeContainerPath {
+    background-color: rgb(255, 255, 255, 0.1);
+    border: 2px solid #1111117a;
+    height: 47vh;
+    width: 35vh;
+}
+
+#remainingTime {
+    width: 35vh;
+    height: 35vh;
+    opacity: 0.6;
+}
+
+#score {
+    width: 35vh;
+    height: 9vh;
+    opacity: 0.6;
+    padding-left: 2vh;
+}
+
+.timeSpan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 28vh;
+}
+
+.scoreSpan {
+    display: flex;
+    flex-direction: column;
+    font-size: 5vh;
+    padding-top: 1vh;
+    padding-left: 1vw;
+}
+
+/* Mice Running Animation */
+
+#runningMice {
+    display: block;
+    position: absolute;
+    bottom: -20vh;
+    left: -10vw;
+    width: 48px;
+    height: 96px;
+    background-image: url(/img/mouseAnimation.png);
+    animation: mouseSprites 0.8s steps(8) infinite alternate;
+}
+
+@keyframes mouseSprites {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -384px 0;
+    }
+}
+
+.gameOver{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15vh;
+    font-size: 5vh;
+}
